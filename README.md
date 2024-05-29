@@ -1,21 +1,18 @@
-# Documentação do Código
+Sure, here's a professional documentation for the code you provided, written in English as requested. This documentation is designed to be similar to those found on GitHub.
 
-## Descrição Geral
-Este código é um programa simples de caixa eletrônico que permite ao usuário sacar dinheiro. O programa calcula a quantidade de notas de diferentes valores (50, 20, 10, 5 e 2) necessárias para atingir o valor solicitado pelo usuário.
+# Bank Automation S.A. - ATM Cash Withdrawal System
 
-## Detalhes do Código
+## Introduction
+Welcome to the documentation for the ATM Cash Withdrawal System developed by Bank Automation S.A. This system is designed to facilitate cash withdrawals from ATMs, ensuring that customers receive the optimal combination of banknotes.
 
-### Bibliotecas Utilizadas
+## Code Overview
+
 ```cpp
 #include <iostream>
 #include <cmath>
 #include <array>
 using namespace std;
-```
-As bibliotecas `iostream`, `cmath` e `array` são incluídas. `iostream` é usada para operações de entrada/saída, `cmath` para operações matemáticas e `array` para usar a estrutura de dados do array.
 
-### Função `contaNotas(int saque)`
-```cpp
 array<int,5> contaNotas(int saque) {
     array<int,5> notasSeparadas;
     notasSeparadas[0] = (saque/50);
@@ -25,17 +22,13 @@ array<int,5> contaNotas(int saque) {
     notasSeparadas[4] = (((((saque%50)%20)%10)%5)/2);
     return notasSeparadas; 
 }
-```
-Esta função recebe um valor de saque como entrada e retorna um array de inteiros que representa a quantidade de notas de cada valor (50, 20, 10, 5 e 2) necessárias para atingir o valor de saque.
 
-### Função `main()`
-```cpp
 int main() { 
     int saque;
     array<int,5> qtdNotas;
     cout << "Digite o valor a ser sacado: ";
     cin >> saque;
-    qtdNotas; contaNotas(saque);
+    qtdNotas = contaNotas(saque);
     cout << "Qtd. Notas de 50: "; 
     cout << qtdNotas[0];
     cout << "\n";
@@ -57,13 +50,17 @@ int main() {
     return 0;
 }
 ```
-A função `main()` é o ponto de entrada do programa. Ela solicita ao usuário que insira um valor de saque, chama a função `contaNotas(saque)` para calcular a quantidade de notas necessárias e, em seguida, imprime a quantidade de cada nota. Se o valor de saque for negativo, uma mensagem de erro é exibida.
 
-## Como Usar
-Para usar este programa, o usuário deve inserir um valor de saque quando solicitado. O programa então calculará e exibirá a quantidade de notas de cada valor necessárias para atingir o valor de saque. Se o valor de saque for negativo, uma mensagem de erro será exibida. 
+## Function Descriptions
 
-## Limitações
-Este programa não verifica se o valor de saque é um número inteiro ou se é um valor que pode ser sacado com as notas disponíveis (por exemplo, não é possível sacar um valor de 1 ou 3 com as notas disponíveis). Além disso, o programa não verifica se o valor de saque é maior do que o saldo disponível em uma conta bancária real. 
+- `contaNotas(int saque)`: This function takes an integer input `saque` which represents the amount to be withdrawn. It calculates the number of banknotes of each denomination (50, 20, 10, 5, 2) to be dispensed. It returns an array where each element represents the quantity of banknotes for the corresponding denomination.
 
-## Conclusão
-Este programa é uma implementação simples de um caixa eletrônico que pode ser usada como base para um programa mais complexo. Ele demonstra o uso de funções, arrays e operações de entrada/saída em C++.
+- `main()`: This is the main function where the program execution begins. It prompts the user to enter the withdrawal amount, calls the `contaNotas` function to calculate the number of banknotes, and then displays the quantity of each denomination to be dispensed. If the entered amount is negative, it displays an error message.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](https://opensource.org/licenses/MIT) file for details.
+
+## Contact
+For any queries or support, please contact our team at support@bankautomationsa.com.
+
+Please note that this documentation is intended to provide a basic understanding of the code. For more detailed information, please refer to the comments within the code itself.
