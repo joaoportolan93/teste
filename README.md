@@ -1,7 +1,7 @@
-# Documentação do Código
-
-## Descrição Geral
-Este código é um programa simples de caixa eletrônico que permite ao usuário sacar dinheiro. O programa calcula a quantidade de notas de diferentes valores (50, 20, 10, 5 e 2) necessárias para atingir o valor solicitado pelo usuário.
+## Guide for user profiles ○( ＾皿＾)っ Hehehe…
+------
+## Descrição Geral 
+Olá pessoal! Tudo tranquilo? Bom, este código é um programa simples de caixa eletrônico que permite ao usuário sacar dinheiro. O programa calcula a quantidade de notas de diferentes valores (100,50, 20, 10, 5 e 2) necessárias para atingir o valor solicitado pelo usuário.
 
 ## Detalhes do Código
 
@@ -28,6 +28,9 @@ array<int,5> contaNotas(int saque) {
 ```
 Esta função recebe um valor de saque como entrada e retorna um array de inteiros que representa a quantidade de notas de cada valor (50, 20, 10, 5 e 2) necessárias para atingir o valor de saque.
 
+---
+### Guide for Devs ᓚᘏᗢ💻    
+---
 ### Função `main()`
 ```cpp
 int main() { 
